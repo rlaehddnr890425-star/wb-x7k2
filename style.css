@@ -1,0 +1,55 @@
+:root{--paper:#fbfaf7;--ink:#17191e;--navy:#24406e;--seal:#1a7f4e;--alert:#c73e3a;--line:#e4e0d6;--mut:#7a7568;--gold:#b98a2f}
+html{background:#fbfaf7}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:"Pretendard","Apple SD Gothic Neo",sans-serif;line-height:1.55;font-size:15px}
+.wrap{max-width:430px;margin:0 auto;padding:18px 16px 60px}
+header.top{display:flex;justify-content:space-between;align-items:baseline;border-bottom:3px solid var(--ink);padding-bottom:10px;margin-bottom:16px}
+.brand{font-family:Georgia,"Nanum Myeongjo",serif;font-size:24px;font-weight:700;letter-spacing:-1px}
+.brand b{color:var(--navy)}
+.tag{font-size:11px;color:var(--mut)}
+h2{font-size:17px;margin:26px 0 10px;display:flex;align-items:center;gap:8px}
+h2 .en{font-size:10px;color:var(--mut);font-weight:400}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:10px}
+.statusbar{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.st{border:1px solid var(--line);border-radius:8px;padding:8px 6px;text-align:center;background:#fff;font-size:11px}
+.st .ok{color:var(--seal);font-weight:700}.st .dead{color:var(--alert);font-weight:700}
+.st small{display:block;color:var(--mut);font-size:9px;margin-top:2px}
+.alert{background:#fdf1ef;border-left:4px solid var(--alert);padding:10px 12px;border-radius:0 8px 8px 0;font-size:13px;margin:14px 0}
+.alert b{color:var(--alert)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.gcard{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px}
+.gcard .n{font-weight:700;font-size:14px}
+.gcard .q{font-size:11px;color:var(--mut);margin-top:4px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{font-size:10px;color:var(--mut);text-align:left;border-bottom:1px solid var(--line);padding:6px 4px;font-weight:500}
+td{border-bottom:1px solid #f0ede5;padding:9px 4px;vertical-align:middle}
+.rank{font-family:Georgia,serif;font-size:15px;font-weight:700;color:var(--navy);width:26px}
+.rank.top{color:var(--gold)}
+.bar{height:8px;background:#eee;border-radius:4px;overflow:hidden;min-width:70px}
+.bar i{display:block;height:100%;background:var(--seal)}
+.bar i.warn{background:var(--gold)}.bar i.bad{background:var(--alert)}
+.badge{display:inline-block;font-size:9px;padding:2px 6px;border-radius:10px;border:1px solid var(--seal);color:var(--seal);font-weight:700;vertical-align:1px}
+.badge.mock{border-color:var(--gold);color:var(--gold)}
+.badge.ad{border-color:#bbb;color:#888}
+.meta{font-size:11px;color:var(--mut)}
+.stars{color:var(--gold);font-size:12px}
+.btn{display:inline-block;background:var(--ink);color:#fff;border-radius:8px;padding:9px 14px;font-size:13px;font-weight:600;text-decoration:none;margin:4px 6px 0 0}
+.btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.btn.red{background:#fff;color:var(--alert);border:1px solid var(--alert)}
+.tl{list-style:none;margin:10px 0 0}
+.tl li{border-left:2px solid var(--line);padding:0 0 14px 14px;position:relative;font-size:12.5px}
+.tl li::before{content:"";position:absolute;left:-5px;top:5px;width:8px;height:8px;border-radius:50%;background:var(--navy)}
+.tl .d{color:var(--mut);font-size:10.5px}
+.spark{display:flex;gap:2px;align-items:flex-end;height:40px;margin:8px 0}
+.spark i{flex:1;background:var(--seal);border-radius:1px}
+.spark i.bad{background:var(--alert)}
+.spark i.warn{background:var(--gold)}
+footer{margin-top:34px;border-top:1px solid var(--line);padding-top:12px;font-size:10.5px;color:var(--mut)}
+.q-item{border-bottom:1px solid #f0ede5;padding:12px 0}
+.q-item .qt{font-weight:600;font-size:14px}
+.q-item .qm{font-size:11px;color:var(--mut);margin-top:3px}
+.ansbox{background:#f2f6f1;border-left:4px solid var(--seal);padding:12px;border-radius:0 8px 8px 0;margin:8px 0;font-size:13px}
+.ansbox .who{font-size:10px;color:var(--seal);font-weight:700;margin-bottom:4px}
+.hum{background:#f7f3ea;border-left:4px solid var(--gold);padding:10px;border-radius:0 8px 8px 0;margin:8px 0;font-size:13px}
+.hum .who{font-size:10px;color:var(--gold);font-weight:700;margin-bottom:4px}
+nav.bot{position:sticky;bottom:0;background:#fff;border-top:1px solid var(--line);display:flex;justify-content:space-around;padding:10px 0;font-size:11px;color:var(--mut);margin:24px -16px -60px}
