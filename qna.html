@@ -1,29 +1,33 @@
-<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>주소본가 — 질문 게시판</title><link rel="stylesheet" href="style.css"></head>
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#17191e"><title>주소본가 — 질문 게시판</title><link rel="stylesheet" href="style.css"></head>
 <body><div class="wrap">
-<header class="top"><div class="brand">주소<b>본가</b></div><div class="tag">물어보면 판정으로 답함</div></header>
+<header class="top"><div class="brand">주소<b>본가</b></div><div class="tag"><a href="index.html" style="color:var(--mut)">← 홈</a></div></header>
 
-<h2>질문 게시판 <span class="en">L2 목업 · 시딩 답변 = 본가 LLM</span></h2>
+<h2 style="margin-top:12px">질문 게시판 <span class="en">L2 목업 · 시딩 답변 = 본가 LLM</span></h2>
 
 <div class="card">
 <div class="q-item" style="border-bottom:none;padding-top:0">
-<div class="qt">티비몬이라는 데, 이거 원조가 맞아요? 검색하면 세 개가 나와서요</div>
-<div class="qm">10/22 · 조회 340 · 검색 유입 87% (<b style="color:var(--seal)">"티비몬 원조" 질문이 곧 검색 진입로</b>)</div>
+<div class="qt"><a class="ext" href="profile.html">티비몬이라는 데, 이거 원조가 맞아요? 검색하면 세 개가 나와서요</a></div>
+<div class="qm">10/22 · 조회 340 · 검색 유입 87% (<b style="color:var(--seal)">"티비몬 원조"가 곧 검색 진입로</b>)</div>
 <div class="ansbox"><div class="who">본가 판정 · 크론 데이터 자동 첨부</div>
-관측 데이터로 답하면: ① 티비몬5.com = 원조 계보 (2024.03 도메인 인수 기록 확보) ② 티비몬.tv = 3개월 전 분가한 복제, 서버 소재 다름 ③ 티비몬1.com = 사칭 추정(타이틀 해시 원조와 불일치). 즐겨찾기는 ①번 유지하세요. 근거 타임라인 →</div>
+관측 데이터로 답하면: ① 티비몬5.com = 원조 계보 (2024.03 도메인 인수 기록 확보) ② 티비몬.tv = 3개월 전 분가 복제, 서버 소재 상이 ③ 티비몬1.com = 사칭 추정(타이틀 해시 불일치). 즐겨찾기는 ① 유지. <span class="gotourl" onclick="return gotoSite('#')">① 원조로 이동 ↗</span></div>
 <div class="hum"><div class="who">사람 답변 (+12)</div>
-① 맞는데 2주 전에 한 번 죽은 적 있어요. 그날 로그 → 본가 점검 기록 4/10 13:30 사멸 → 16:40 복구로 이미 박혀 있음</div>
+① 맞는데 2주 전 한 번 죽은 적 있어요. 그날 로그 → 본가 점검 기록 4/10 13:30 사멸 → 16:40 복구로 이미 박혀 있음</div>
 </div>
-
-<div class="q-item"><div class="qt">빠른링크 이틀째 안 열리는데 우리만 그런가요</div><div class="qm">10/23 · 제보 6건 — 상태바 ✕와 자동 연결됨 · <b style="color:var(--navy)">답변 대기</b></div></div>
-<div class="q-item"><div class="qt">AI 무료 채팅 사이트 순위에서 퍼플렉시티 빠진 이유요</div><div class="qm">10/21 · 조회 58 · "장르 편성 의견" 라벨</div></div>
-<div class="q-item"><div class="qt">여기여 배너 광고 클릭하면 100% 여기여 맞나요 (사칭 필터 질문)</div><div class="qm">10/19 · 답 3 · 채택됨</div></div>
+<div class="adtile" onclick="return gotoSite('#')"><span class="badge ad">자리 광고 · 답변 아래</span> <b>질문판은 체류시간이 길어서 단가가 제일 높다</b> — 업계 실측 패턴</div>
+<div class="q-item"><div class="qt">빠른링크 이틀째 안 열리는데 우리만 그런가요</div><div class="qm">10/23 · 제보 6건 — 상태바 ✕와 자동 연결 · <b style="color:var(--navy)">답변 대기</b></div></div>
+<div class="q-item"><div class="qt">AI 무료 채팅 순위에서 퍼플렉시티 빠진 이유요</div><div class="qm">10/21 · 조회 58 · "장르 편성 의견"</div></div>
+<div class="q-item"><div class="qt">여기여 배너 광고 클릭하면 100% 여기여 맞나요</div><div class="qm">10/19 · 답 3 · 채택됨 · <a href="profile.html" style="color:var(--navy)">프로필 ↗</a></div></div>
 </div>
 
 <div class="card" style="font-size:12px;background:#f7f3ea;border-color:#e8dfc8">
-<b>이 게시판의 상업적 의미</b> — 질문 하나는 그 자체로 구글 색인 페이지입니다. 사람이 없어도 시딩 답변까지 갖춰진 질문 페이지는 "티비몬 원조" 같은 롱테일 검색을 평생 퍼옵니다. 초기 6개월은 본가 LLM이 질문+답변을 깔고, 사람 질문이 시딩을 넘어가는 순간 L3(자생 커뮤니티) 게이트 통과로 봅니다. <span class="badge mock">MOCK</span>
+<b>이 게시판의 상업적 의미</b> — 질문 하나가 그 자체로 구글 색인 페이지. 시딩 답변까지 갖춰지면 "티비몬 원조" 같은 롱테일 검색을 평생 퍼온다. 초기 6개월은 본가 LLM이 질문+답변을 깔고, 사람 질문이 시딩을 넘어서는 순간 L3(자생 커뮤니티) 게이트 통과로 본다. <span class="badge mock">MOCK</span>
 </div>
 
 <a class="btn">질문 남기기</a><a class="btn ghost">장르 건의</a>
 
 <nav class="bot"><span>홈</span><span>순위</span><span>프로필</span><span style="color:var(--ink);font-weight:700">질문판</span></nav>
-</div></body></html>
+</div>
+<div class="fab" onclick="return gotoSite('#')">🏪 <b>질문판 자리 광고</b> — 체류시간 최고 면적 <small>AD</small></div>
+<div id="ovl"><div class="ovlc"><span class="tagx">×</span><span class="adlb">AD</span><div class="big">이동 전에 한 장 봐야지</div><div style="font-size:12px;color:#666">본가 표준 인스트리션</div><div class="cd" id="ovl-cd">3초 후 이동</div><div style="margin-top:8px;font-size:10px;color:#aaa" id="ovl-skip">배경 누르면 스킵</div></div></div>
+<script src="adstack.js"></script>
+</body></html>
