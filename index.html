@@ -1,84 +1,133 @@
 <!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#17191e"><meta name="robots" content="noindex,nofollow"><title>주소본가 — 링크 중계기</title><link rel="stylesheet" href="style.css">
-<style>.bannerrow{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:12px 0}.bn{border-radius:8px;padding:12px 10px;color:#fff;font-weight:800;font-size:13px;cursor:pointer;text-shadow:0 1px 2px rgba(0,0,0,.4)}.bn small{display:block;font-weight:400;font-size:10px;opacity:.85}.bn1{background:linear-gradient(135deg,#8c1d1d,#d94f2b)}.bn2{background:linear-gradient(135deg,#123,#2a5d9f)}.bn3{background:linear-gradient(135deg,#3a2c12,#b98a2f)}.bn4{background:linear-gradient(135deg,#123312,#2f8f5b)}.chipbar{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0;font-size:11px}.chipbar a{background:#fff;border:1px solid #e4e0d6;border-radius:12px;padding:4px 9px;color:#17191e;text-decoration:none}.glist a{display:flex;justify-content:space-between;padding:7px 2px;border-bottom:1px solid #f2efe7;text-decoration:none;color:inherit;font-size:13px}#feed .fi{font-size:12px;padding:6px 2px;border-bottom:1px dashed #eee;color:#444}#feed .fi.new{animation:fade 1s;background:#fffbe9}@keyframes fade{from{opacity:0;transform:translateY(-4px)}}@media(min-width:768px){.bannerrow{grid-template-columns:repeat(4,1fr)!important}}
+<style>
+.bannerrow{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:10px 0}
+.bn{border-radius:8px;padding:14px 12px;color:#fff;font-weight:800;font-size:14px;cursor:pointer;text-shadow:0 1px 2px rgba(0,0,0,.45);min-height:76px;position:relative;overflow:hidden}
+.bn .em{position:absolute;right:6px;bottom:-6px;font-size:44px;opacity:.35}
+.bn small{display:block;font-weight:400;font-size:10px;opacity:.85;margin-top:3px}
+.bn1{background:linear-gradient(135deg,#8c1d1d,#d94f2b)}.bn2{background:linear-gradient(135deg,#0f2440,#2a5d9f)}.bn3{background:linear-gradient(135deg,#3a2c12,#b98a2f)}.bn4{background:linear-gradient(135deg,#123312,#2f8f5b)}.bn5{background:linear-gradient(135deg,#2c1240,#7b3fb0)}.bn6{background:linear-gradient(135deg,#40121f,#c23b6b)}
+.chipbar{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0;font-size:11.5px;align-items:center}
+.chipbar a{background:#fff;border:1px solid #e4e0d6;border-radius:12px;padding:4px 9px;color:#17191e;text-decoration:none}
+#layout{display:block}.rail{display:none}
+.rail .bn{min-height:64px;font-size:12.5px;margin-bottom:6px}
+.glist a{display:flex;align-items:center;gap:8px;padding:7px 2px;border-bottom:1px solid #f2efe7;text-decoration:none;color:inherit;font-size:13.5px}
+.th{width:26px;height:26px;border-radius:50%;color:#fff;font-size:12px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.ins{border-radius:8px;padding:10px;margin:10px 0;color:#fff;font-weight:800;font-size:13px;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.adgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:12px 0}
+.adg{background:#fff;border:1px solid #e4e0d6;border-radius:8px;padding:10px 6px;text-align:center;font-size:11.5px;cursor:pointer}
+.adg .em{font-size:22px;display:block;margin-bottom:2px}
+.adg small{color:#b98a2f;font-size:8.5px;letter-spacing:1px}
+#feed .fi{font-size:12.5px;padding:6px 2px;border-bottom:1px dashed #eee;color:#444}#feed .fi.new{animation:fade 1s;background:#fffbe9}@keyframes fade{from{opacity:0}}
+.searchbar{background:#fff;border:2px solid #17191e;border-radius:24px;padding:9px 14px;font-size:13px;display:flex;justify-content:space-between;color:#999;margin:12px 0}
+@media(min-width:1000px){
+ .wrap{max-width:1440px;width:98.5%;font-size:15.5px}
+ #layout{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;align-items:start}
+ #genres{display:contents}
+ #layout>.card,#layout>.ins{margin:0}
+ .rail{display:block;grid-column:auto}
+ .bannerrow{grid-template-columns:repeat(6,1fr)}.bn{min-height:92px;font-size:14.5px}
+ .adgrid{grid-template-columns:repeat(8,1fr)}
+ .glist a{font-size:14.5px;padding:9px 2px}
+ .searchbar{font-size:15px}
+}
 </style></head>
 <body><div class="wrap">
 <header class="top"><div class="brand">주소<b>본가</b></div><div class="tag" id="clock" style="font-variant-numeric:tabular-nums">…</div></header>
 <div class="util"><a href="#">★ 즐겨찾기</a><a href="#">텔레 채널(새주소 피난처)</a><a href="#">광고문의</a><a href="rank.html">전체 랭킹</a></div>
 
 <div class="bannerrow">
-<div class="bn bn1" onclick="return gotoSite('#')">⚽ 스포츠 시즌권<small>오늘 첫충 40% · AD</small></div>
-<div class="bn bn2" onclick="return gotoSite('#')">🎰 카지노&스포츠<small>첫 입금 70% · AD</small></div>
-<div class="bn bn3" onclick="return gotoSite('#')">🐎 돌직구 경주<small>실시간 배당 · AD</small></div>
-<div class="bn bn4" onclick="return gotoSite('#')">📺 중계 무제한<small>광고 0장 공약(본가 대비) · AD</small></div>
+<div class="bn bn1" onclick="return gotoSite('#')">⚽ 스포츠 시즌권<small>오늘 첫충 40% · AD</small><span class="em">⚽</span></div>
+<div class="bn bn2" onclick="return gotoSite('#')">🎰 카지노&스포츠<small>첫 입금 70% · AD</small><span class="em">🎰</span></div>
+<div class="bn bn5" onclick="return gotoSite('#')">🐴 미니게임 롤링<small>미들 0.4% 매일 1% · AD</small><span class="em">🎲</span></div>
+<div class="bn bn3" onclick="return gotoSite('#')">🐎 돌직구 경주<small>실시간 배당 · AD</small><span class="em">🏇</span></div>
+<div class="bn bn4" onclick="return gotoSite('#')">📺 중계 무제한<small>본가 경유 시 광고 2장뿐 · AD</small><span class="em">📡</span></div>
+<div class="bn bn6" onclick="return gotoSite('#')">💰 출석점수 머니<small>접속만 해도 적립 · AD</small><span class="em">💸</span></div>
 </div>
 
-<div class="chipbar"><b style="font-size:11px">인기검색</b><a href="#">여기여 새주소</a><a href="#">티비몬</a><a href="#">누누비디오</a><a href="#">토토</a><a href="#">av19</a><a href="#">호스트바</a></div>
+<div class="searchbar"><span>검색어 또는 주소 입력…</span><span>🔍</span></div>
+<div class="chipbar"><b>인기검색</b><a href="#">여기여 새주소</a><a href="#">티비몬</a><a href="#">누누비디오</a><a href="#">토토</a><a href="#">av19</a><a href="#">호스트바</a><a href="#">주소월드</a><a href="#">스트고</a></div>
 
-<h2 style="margin-top:8px">장르별 링크 방 <span class="en">전부 2단 점프(광고 경유) 연결</span></h2>
-
+<div id="layout">
 <div id="genres">
 <div class="card"><b>🔥 주소모음 TOP</b><div class="glist">
-<a onclick="return gotoSite('https://yugiyu7.com')"><span>🥇 여기여 <span class="badge">99.2%</span></span><span style="color:#bbb">이동›</span></a>
-<a onclick="return gotoSite('https://hoppang.net')"><span>🥈 호빵넷 <span class="badge">97.4%</span></span><span style="color:#bbb">이동›</span></a>
-<a onclick="return gotoSite('#')"><span>🥉 주소월드(wdwd) <span class="badge">95.1%</span></span><span style="color:#bbb">이동›</span></a>
-<a onclick="return gotoSite('#')"><span>주소365</span><span style="color:#bbb">이동›</span></a>
-<a onclick="return gotoSite('#')"><span>주소야</span><span style="color:#bbb">이동›</span></a>
-<a onclick="return gotoSite('#')"><span>주소꼬마</span><span style="color:#bbb">이동›</span></a>
-<a onclick="return gotoSite('profile.html')"><span style="color:#24406e">장르 전체 31곳 (순위·근거표는 여기까진 있음)</span><span>›</span></a>
+<a onclick="return gotoSite('https://yugiyu7.com')"><span class="th" style="background:#7b3fb0">여</span><span>🥇 여기여 <span class="badge">99.2%</span></span><span style="margin-left:auto;color:#bbb">›</span></a>
+<a onclick="return gotoSite('https://hoppang.net')"><span class="th" style="background:#c0392b">호</span><span>🥈 호빵넷 <span class="badge">97.4%</span></span><span style="margin-left:auto;color:#bbb">›</span></a>
+<a onclick="return gotoSite('#')"><span class="th" style="background:#2a5d9f">지</span><span>🥉 주소월드(wdwd) <span class="badge">95.1%</span></span><span style="margin-left:auto;color:#bbb">›</span></a>
+<a onclick="return gotoSite('#')"><span class="th" style="background:#16a085">3</span><span>주소365</span><span style="margin-left:auto;color:#bbb">›</span></a>
+<a onclick="return gotoSite('#')"><span class="th" style="background:#d35400">야</span><span>주소야</span><span style="margin-left:auto;color:#bbb">›</span></a>
+<a onclick="return gotoSite('#')"><span class="th" style="background:#7f8c8d">꼬</span><span>주소꼬마</span><span style="margin-left:auto;color:#bbb">›</span></a>
+<a onclick="return gotoSite('rank.html')"><span style="color:#24406e;font-weight:600">전체 31곳 · 순위 근거표 →</span><span>›</span></a>
 </div></div>
-
-<div class="bn bn2" style="margin:10px 0;padding:10px" onclick="return gotoSite('#')">🎯 목록 사이 자리 — 3위와 4위 사이, 업계 최고가 <small>AD</small></div>
+<div class="ins bn2" onclick="return gotoSite('#')"><span>🎯 3·4위 사이 자리 — 업계 최고가 인서트</span><small style="font-weight:400">AD</small></div>
 
 <div class="card"><b>⚽ 스포츠중계 TOP</b><div class="glist">
-<a onclick="return gotoSite('#')"><span>🥇 티비몬5 <span class="badge">원조</span></span><span style="color:#bbb">이동›</span></a>
-<a onclick="return gotoSite('#')"><span>🥈 스트고</span><span style="color:#bbb">이동›</span></a>
-<a onclick="return gotoSite('#')"><span>🥉 블랙TV</span><span style="color:#bbb">이동›</span></a>
-<a onclick="return gotoSite('#')"><span>중계의신</span><span style="color:#bbb">이동›</span></a>
-<a onclick="return gotoSite('#')"><span>킹콩TV</span><span style="color:#bbb">이동›</span></a>
-<a onclick="return gotoSite('rank.html')"><span style="color:#24406e">전체 24곳 ›</span><span>›</span></a>
+<a onclick="return gotoSite('#')"><span class="th" style="background:#e67e22">몬</span><span>🥇 티비몬5 <span class="badge">원조</span></span><span style="margin-left:auto;color:#bbb">›</span></a>
+<a onclick="return gotoSite('#')"><span class="th" style="background:#2980b9">스</span><span>🥈 스트고</span><span style="margin-left:auto;color:#bbb">›</span></a>
+<a onclick="return gotoSite('#')"><span class="th" style="background:#27ae60">블</span><span>🥉 블랙TV</span><span style="margin-left:auto;color:#bbb">›</span></a>
+<a onclick="return gotoSite('#')"><span class="th" style="background:#8e44ad">신</span><span>중계의신</span><span style="margin-left:auto;color:#bbb">›</span></a>
+<a onclick="return gotoSite('#')"><span class="th" style="background:#c0392b">킹</span><span>킹콩TV</span><span style="margin-left:auto;color:#bbb">›</span></a>
+<a onclick="return gotoSite('rank.html')"><span style="color:#24406e;font-weight:600">전체 24곳 →</span><span>›</span></a>
 </div></div>
 
 <div class="card"><b>🎬 무료영상·웹툰 TOP</b><div class="glist">
-<a onclick="return gotoSite('#')"><span>🥇 누누비디오 <span class="badge" style="border-color:#c73e3a;color:#c73e3a">짭 9</span></span><span style="color:#bbb">이동›</span></a>
-<a onclick="return gotoSite('#')"><span>🥈 티비위키 <span class="badge" style="border-color:#c73e3a;color:#c73e3a">짭 12</span></span><span style="color:#bbb">이동›</span></a>
-<a onclick="return gotoSite('#')"><span>🥉 미스AV</span><span style="color:#bbb">이동›</span></a>
-<a onclick="return gotoSite('#')"><span>아프리카툰</span><span style="color:#bbb">이동›</span></a>
-<a onclick="return gotoSite('rank.html')"><span style="color:#24406e">전체 18곳 ›</span><span>›</span></a>
+<a onclick="return gotoSite('#')"><span class="th" style="background:#16a085">누</span><span>🥇 누누비디오 <span class="badge" style="border-color:#c73e3a;color:#c73e3a">짭 9</span></span><span style="margin-left:auto;color:#bbb">›</span></a>
+<a onclick="return gotoSite('#')"><span class="th" style="background:#2c3e50">위</span><span>🥈 티비위키 <span class="badge" style="border-color:#c73e3a;color:#c73e3a">짭 12</span></span><span style="margin-left:auto;color:#bbb">›</span></a>
+<a onclick="return gotoSite('#')"><span class="th" style="background:#e84393">미</span><span>🥉 미스AV</span><span style="margin-left:auto;color:#bbb">›</span></a>
+<a onclick="return gotoSite('#')"><span class="th" style="background:#f39c12">툰</span><span>아프리카툰</span><span style="margin-left:auto;color:#bbb">›</span></a>
+<a onclick="return gotoSite('rank.html')"><span style="color:#24406e;font-weight:600">전체 18곳 →</span><span>›</span></a>
 </div></div>
 
-<div class="bn bn1" style="margin:10px 0;padding:10px" onclick="return gotoSite('#')">🍑 유흥 배너 자리 — 이 줄 아래엔 광고가 안 들어갑니다(거의) <small>AD</small></div>
-
 <div class="card"><b>🍑 유흥·성인 TOP</b><div class="glist">
-<a onclick="return gotoSite('#')"><span>🥇 밍키넷</span><span style="color:#bbb">이동›</span></a>
-<a onclick="return gotoSite('#')"><span>🥈 av19</span><span style="color:#bbb">이동›</span></a>
-<a onclick="return gotoSite('#')"><span>🥉 오피가이드</span><span style="color:#bbb">이동›</span></a>
-<a onclick="return gotoSite('#')"><span>야스닷</span><span style="color:#bbb">이동›</span></a>
-<a onclick="return gotoSite('rank.html')"><span style="color:#24406e">전체 22곳 ›</span><span>›</span></a>
+<a onclick="return gotoSite('#')"><span class="th" style="background:#e84393">밍</span><span>🥇 밍키넷</span><span style="margin-left:auto;color:#bbb">›</span></a>
+<a onclick="return gotoSite('#')"><span class="th" style="background:#fd79a8">19</span><span>🥈 av19</span><span style="margin-left:auto;color:#bbb">›</span></a>
+<a onclick="return gotoSite('#')"><span class="th" style="background:#6c5ce7">옵</span><span>🥉 오피가이드</span><span style="margin-left:auto;color:#bbb">›</span></a>
+<a onclick="return gotoSite('#')"><span class="th" style="background:#b2bec3">야</span><span>야스닷</span><span style="margin-left:auto;color:#bbb">›</span></a>
+<a onclick="return gotoSite('rank.html')"><span style="color:#24406e;font-weight:600">전체 22곳 →</span><span>›</span></a>
 </div></div>
 
 <div class="card"><b>💻 커뮤니티·AI TOP</b><div class="glist">
-<a onclick="return gotoSite('https://www.dcinside.com/')"><span>🥇 디시인사이드</span><span style="color:#bbb">이동›</span></a>
-<a onclick="return gotoSite('https://www.ppomppu.co.kr/')"><span>🥈 뽐뿌 <span class="badge">원조</span></span><span style="color:#bbb">이동›</span></a>
-<a onclick="return gotoSite('https://www.ohou.co.kr/')"><span>🥉 오유</span><span style="color:#bbb">이동›</span></a>
-<a onclick="return gotoSite('https://sir.kr')"><span>에이시(sir)</span><span style="color:#bbb">이동›</span></a>
-<a onclick="return gotoSite('#')"><span>AI 채팅 랭킹 40곳</span><span style="color:#bbb">이동›</span></a>
+<a onclick="return gotoSite('https://www.dcinside.com/')"><span class="th" style="background:#0052c3">디</span><span>🥇 디시인사이드</span><span style="margin-left:auto;color:#bbb">›</span></a>
+<a onclick="return gotoSite('https://www.ppomppu.co.kr/')"><span class="th" style="background:#ff6b35">뽐</span><span>🥈 뽐뿌 <span class="badge">원조</span></span><span style="margin-left:auto;color:#bbb">›</span></a>
+<a onclick="return gotoSite('https://www.ohou.co.kr/')"><span class="th" style="background:#27ae60">오</span><span>🥉 오유</span><span style="margin-left:auto;color:#bbb">›</span></a>
+<a onclick="return gotoSite('https://sir.kr')"><span class="th" style="background:#2c3e50">시</span><span>에이시(sir)</span><span style="margin-left:auto;color:#bbb">›</span></a>
+<a onclick="return gotoSite('#')"><span class="th" style="background:#00b894">AI</span><span>AI 채팅 랭킹 40곳</span><span style="margin-left:auto;color:#bbb">›</span></a>
 </div></div>
-
 </div>
 
-<h2>실시간 게시판 <span class="en">아래 물결판 — 크론 시딩 + 실사용자</span></h2>
+<div class="rail">
+<div class="bn bn6" onclick="return gotoSite('#')">🎁 신규가입 첫충 100%<small>우측 레일 1번 · AD</small></div>
+<div class="bn bn5" onclick="return gotoSite('#')">🎲 롤링 1.2% 미니<small>레일 2 · AD</small></div>
+<div class="bn bn1" onclick="return gotoSite('#')">⚾ 실시간 해외야구<small>레일 3 · AD</small></div>
+<div class="bn bn3" onclick="return gotoSite('#')">🏇 오늘 오후 경주<small>레일 4 · AD</small></div>
+<div class="bn bn4" onclick="return gotoSite('#')">📱 앱 설치 5천원<small>레일 5 · AD</small></div>
+<div class="bn bn2" onclick="return gotoSite('#')">💳 무통장 60초 출금<small>레일 6 · AD</small></div>
+</div>
+</div>
+
+<h2>협력 업체 <span class="en">하단 링크 팜 — 여기가 두 번째 지출면</span></h2>
+<div class="adgrid">
+<div class="adg" onclick="return gotoSite('#')"><span class="em">🎰</span>반도카지노<small>AD</small></div>
+<div class="adg" onclick="return gotoSite('#')"><span class="em">⚽</span>고양이스포츠<small>AD</small></div>
+<div class="adg" onclick="return gotoSite('#')"><span class="em">🐎</span>돌직구벳<small>AD</small></div>
+<div class="adg" onclick="return gotoSite('#')"><span class="em">🎲</span>슈어미니<small>AD</small></div>
+<div class="adg" onclick="return gotoSite('#')"><span class="em">📺</span>티비몬5<small>協</small></div>
+<div class="adg" onclick="return gotoSite('#')"><span class="em">🍑</span>밍키넷<small>協</small></div>
+<div class="adg" onclick="return gotoSite('#')"><span class="em">🎬</span>누누비디오<small>協</small></div>
+<div class="adg" onclick="return gotoSite('#')"><span class="em">🏦</span>본가정산소<small>自</small></div>
+</div>
+
+<h2>실시간 게시판</h2>
 <div class="card" style="padding:6px 12px">
 <div id="feed">
 <div class="fi"><b>김**</b> 여깄는데 잘 터지네요 3곳 다 되네요 <span style="float:right;color:#bbb;font-size:9.5px">3분 전</span></div>
 <div class="fi"><b>박**</b> 뽐뿌 원조 확정 배지 보고 가입했어요 <span style="float:right;color:#bbb;font-size:9.5px">8분 전</span></div>
-<div class="fi"><b>최**</b> 사칭 주의 제보 감사합니다 잘 봤어요 <span style="float:right;color:#bbb;font-size:9.5px">12분 전</span></div>
+<div class="fi"><b>최**</b> 사칭 주의 제보 감사합니다 <span style="float:right;color:#bbb;font-size:9.5px">12분 전</span></div>
 </div>
-<div style="margin-top:8px"><a class="btn ghost" style="font-size:11px" href="qna.html">게시판 전체 (질문·제보) →</a></div>
+<div style="margin-top:8px"><a class="btn ghost" style="font-size:11px" href="qna.html">게시판 전체 →</a></div>
 </div>
 
-<footer>평가·분석 글은 랭킹 페이지 근거표와 프로필의 새주소 타임라인까지만. 본체는 <b>링크×광고 중계기</b>다. <span class="badge mock">MOCK v3</span></footer>
+<footer>PC: 4열+우측 광고 레일 / 폰: 한 손 한 줄 — 같은 도메인, 알아서 갈림. 배너 면수 목표: PC 20면 이상(wdwd15 실측 138매가 이 업계 상한선)</footer>
 </div>
-<div class="fab" onclick="return gotoSite('#')">🏪 하단 고정 플로팅 — 업계 실측 고정배너 1개, 우리도 1개 <small>AD</small></div>
-<div id="epop"><div class="ovlc" style="background:#fff;border-radius:12px;max-width:330px;width:88%;padding:20px;text-align:center;position:relative"><span class="tagx" onclick="return closeEntry()" style="position:absolute;top:8px;right:12px;color:#999">×</span><span class="badge ad">AD</span><div style="font-size:19px;font-weight:800;margin:12px 0 4px;color:#24406e">🎰 진입 팝업</div><div style="font-size:12px;color:#666">세션당 1회. 업계 필수품 — 없는 곳이 없음</div><div style="margin-top:10px"><a class="btn" style="font-size:12px" onclick="return closeEntry()">본방 들어가</a></div></div></div>
+<div class="fab" onclick="return gotoSite('#')">🏪 하단 고정 플로팅 — 우리도 업계처럼 1개 <small>AD</small></div>
+<div id="epop"><div class="ovlc" style="background:#fff;border-radius:12px;max-width:330px;width:88%;padding:20px;text-align:center;position:relative"><span class="tagx" onclick="return closeEntry()" style="position:absolute;top:8px;right:12px;color:#999">×</span><span class="badge ad">AD</span><div style="font-size:19px;font-weight:800;margin:12px 0 4px;color:#24406e">🎰 진입 팝업</div><div style="font-size:12px;color:#666">세션당 1회</div><div style="margin-top:10px"><a class="btn" style="font-size:12px" onclick="return closeEntry()">본방 들어가</a></div></div></div>
 <script src="adstack.js"></script>
 </body></html>
