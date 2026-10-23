@@ -73,3 +73,13 @@ nav.bot{position:sticky;bottom:0;background:#fff;border-top:1px solid var(--line
 a.ext{text-decoration:none;color:inherit}
 a.ext:hover{color:var(--navy)}
 .gotourl{display:inline-block;font-size:10px;border:1px solid var(--navy);color:var(--navy);border-radius:6px;padding:2px 7px;cursor:pointer}
+
+@media(min-width:768px){
+ .wrap{max-width:1020px}
+ #genres{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;align-items:start}
+ #genres>.card{margin:0}
+ .bannerrow{grid-template-columns:repeat(4,1fr)}
+ .grid2{grid-template-columns:repeat(3,1fr)}
+ .statusbar{grid-template-columns:repeat(8,1fr)}
+ nav.bot{display:none}
+}
