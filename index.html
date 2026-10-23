@@ -1,44 +1,80 @@
-<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#17191e"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>주소본가 — 사이트의 원조는 많고, 본가는 없다</title><link rel="stylesheet" href="style.css"></head>
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#17191e"><title>주소본가 — 링크 중계기</title><link rel="stylesheet" href="style.css">
+<style>.bannerrow{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:12px 0}.bn{border-radius:8px;padding:12px 10px;color:#fff;font-weight:800;font-size:13px;cursor:pointer;text-shadow:0 1px 2px rgba(0,0,0,.4)}.bn small{display:block;font-weight:400;font-size:10px;opacity:.85}.bn1{background:linear-gradient(135deg,#8c1d1d,#d94f2b)}.bn2{background:linear-gradient(135deg,#123,#2a5d9f)}.bn3{background:linear-gradient(135deg,#3a2c12,#b98a2f)}.bn4{background:linear-gradient(135deg,#123312,#2f8f5b)}.chipbar{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0;font-size:11px}.chipbar a{background:#fff;border:1px solid #e4e0d6;border-radius:12px;padding:4px 9px;color:#17191e;text-decoration:none}.glist a{display:flex;justify-content:space-between;padding:7px 2px;border-bottom:1px solid #f2efe7;text-decoration:none;color:inherit;font-size:13px}#feed .fi{font-size:12px;padding:6px 2px;border-bottom:1px dashed #eee;color:#444}#feed .fi.new{animation:fade 1s;background:#fffbe9}@keyframes fade{from{opacity:0;transform:translateY(-4px)}}</style></head>
 <body><div class="wrap">
-<header class="top"><div class="brand">주소<b>본가</b></div><div class="tag">사이트 원조 판정소</div></header>
-<div class="util"><a href="#">★ 즐겨찾기 추가</a><a href="#">텔레 채널</a><a href="#">광고·제휴문의</a><a href="rank.html">전체 순위</a></div>
+<header class="top"><div class="brand">주소<b>본가</b></div><div class="tag" id="clock" style="font-variant-numeric:tabular-nums">…</div></header>
+<div class="util"><a href="#">★ 즐겨찾기</a><a href="#">텔레 채널(새주소 피난처)</a><a href="#">광고문의</a><a href="rank.html">전체 랭킹</a></div>
 
-<div class="ticker"><span>⚡ 방금: 빠른링크 26분째 사멸 확인 — 장애 카운트 발동 · 여기여 사칭 yugi-y0.com 관측 48시간째 · 중계 장르 신규 등록 2건 (심사 중) · 이번 주 급사: 없음 ⚡</span></div>
+<div class="bannerrow">
+<div class="bn bn1" onclick="return gotoSite('#')">⚽ 스포츠 시즌권<small>오늘 첫충 40% · AD</small></div>
+<div class="bn bn2" onclick="return gotoSite('#')">🎰 카지노&스포츠<small>첫 입금 70% · AD</small></div>
+<div class="bn bn3" onclick="return gotoSite('#')">🐎 돌직구 경주<small>실시간 배당 · AD</small></div>
+<div class="bn bn4" onclick="return gotoSite('#')">📺 중계 무제한<small>광고 0장 공약(본가 대비) · AD</small></div>
+</div>
 
-<h2 style="margin-top:4px">오늘의 단골 <span class="en">클릭 = 광고 1장 → 새 창 이동</span></h2>
+<div class="chipbar"><b style="font-size:11px">인기검색</b><a href="#">여기여 새주소</a><a href="#">티비몬</a><a href="#">누누비디오</a><a href="#">토토</a><a href="#">av19</a><a href="#">호스트바</a></div>
+
+<h2 style="margin-top:8px">장르별 링크 방 <span class="en">전부 2단 점프(광고 경유) 연결</span></h2>
+
+<div class="card"><b>🔥 주소모음 TOP</b><div class="glist">
+<a onclick="return gotoSite('https://yugiyu7.com')"><span>🥇 여기여 <span class="badge">99.2%</span></span><span style="color:#bbb">이동›</span></a>
+<a onclick="return gotoSite('https://hoppang.net')"><span>🥈 호빵넷 <span class="badge">97.4%</span></span><span style="color:#bbb">이동›</span></a>
+<a onclick="return gotoSite('#')"><span>🥉 주소월드(wdwd) <span class="badge">95.1%</span></span><span style="color:#bbb">이동›</span></a>
+<a onclick="return gotoSite('#')"><span>주소365</span><span style="color:#bbb">이동›</span></a>
+<a onclick="return gotoSite('#')"><span>주소야</span><span style="color:#bbb">이동›</span></a>
+<a onclick="return gotoSite('#')"><span>주소꼬마</span><span style="color:#bbb">이동›</span></a>
+<a onclick="return gotoSite('profile.html')"><span style="color:#24406e">장르 전체 31곳 (순위·근거표는 여기까진 있음)</span><span>›</span></a>
+</div></div>
+
+<div class="bn bn2" style="margin:10px 0;padding:10px" onclick="return gotoSite('#')">🎯 목록 사이 자리 — 3위와 4위 사이, 업계 최고가 <small>AD</small></div>
+
+<div class="card"><b>⚽ 스포츠중계 TOP</b><div class="glist">
+<a onclick="return gotoSite('#')"><span>🥇 티비몬5 <span class="badge">원조</span></span><span style="color:#bbb">이동›</span></a>
+<a onclick="return gotoSite('#')"><span>🥈 스트고</span><span style="color:#bbb">이동›</span></a>
+<a onclick="return gotoSite('#')"><span>🥉 블랙TV</span><span style="color:#bbb">이동›</span></a>
+<a onclick="return gotoSite('#')"><span>중계의신</span><span style="color:#bbb">이동›</span></a>
+<a onclick="return gotoSite('#')"><span>킹콩TV</span><span style="color:#bbb">이동›</span></a>
+<a onclick="return gotoSite('rank.html')"><span style="color:#24406e">전체 24곳 ›</span><span>›</span></a>
+</div></div>
+
+<div class="card"><b>🎬 무료영상·웹툰 TOP</b><div class="glist">
+<a onclick="return gotoSite('#')"><span>🥇 누누비디오 <span class="badge" style="border-color:#c73e3a;color:#c73e3a">짭 9</span></span><span style="color:#bbb">이동›</span></a>
+<a onclick="return gotoSite('#')"><span>🥈 티비위키 <span class="badge" style="border-color:#c73e3a;color:#c73e3a">짭 12</span></span><span style="color:#bbb">이동›</span></a>
+<a onclick="return gotoSite('#')"><span>🥉 미스AV</span><span style="color:#bbb">이동›</span></a>
+<a onclick="return gotoSite('#')"><span>아프리카툰</span><span style="color:#bbb">이동›</span></a>
+<a onclick="return gotoSite('rank.html')"><span style="color:#24406e">전체 18곳 ›</span><span>›</span></a>
+</div></div>
+
+<div class="bn bn1" style="margin:10px 0;padding:10px" onclick="return gotoSite('#')">🍑 유흥 배너 자리 — 이 줄 아래엔 광고가 안 들어갑니다(거의) <small>AD</small></div>
+
+<div class="card"><b>🍑 유흥·성인 TOP</b><div class="glist">
+<a onclick="return gotoSite('#')"><span>🥇 밍키넷</span><span style="color:#bbb">이동›</span></a>
+<a onclick="return gotoSite('#')"><span>🥈 av19</span><span style="color:#bbb">이동›</span></a>
+<a onclick="return gotoSite('#')"><span>🥉 오피가이드</span><span style="color:#bbb">이동›</span></a>
+<a onclick="return gotoSite('#')"><span>야스닷</span><span style="color:#bbb">이동›</span></a>
+<a onclick="return gotoSite('rank.html')"><span style="color:#24406e">전체 22곳 ›</span><span>›</span></a>
+</div></div>
+
+<div class="card"><b>💻 커뮤니티·AI TOP</b><div class="glist">
+<a onclick="return gotoSite('https://www.dcinside.com/')"><span>🥇 디시인사이드</span><span style="color:#bbb">이동›</span></a>
+<a onclick="return gotoSite('https://www.ppomppu.co.kr/')"><span>🥈 뽐뿌 <span class="badge">원조</span></span><span style="color:#bbb">이동›</span></a>
+<a onclick="return gotoSite('https://www.ohou.co.kr/')"><span>🥉 오유</span><span style="color:#bbb">이동›</span></a>
+<a onclick="return gotoSite('https://sir.kr')"><span>에이시(sir)</span><span style="color:#bbb">이동›</span></a>
+<a onclick="return gotoSite('#')"><span>AI 채팅 랭킹 40곳</span><span style="color:#bbb">이동›</span></a>
+</div></div>
+
+<h2>실시간 게시판 <span class="en">아래 물결판 — 크론 시딩 + 실사용자</span></h2>
 <div class="card" style="padding:6px 12px">
-<table>
-<tr><td class="rank top">1</td><td><a class="ext" href="profile.html"><b>여기여</b></a> <span class="badge">본가 인증</span><div class="meta">99.2% · 18:30 확인</div></td><td><span class="gotourl" onclick="return gotoSite('https://yugiyu7.com')">사이트 ↗</span></td></tr>
-<tr><td class="rank top">2</td><td><a class="ext" href="profile.html"><b>호빵넷</b></a><div class="meta">97.4% · 18:30 확인</div></td><td><span class="gotourl" onclick="return gotoSite('https://hoppang.net')">사이트 ↗</span></td></tr>
-<tr><td class="rank top">3</td><td><a class="ext" href="profile.html"><b>뽐뿌</b></a> <span class="badge">원조 확정</span><div class="meta">99.9% · 커뮤니티</div></td><td><span class="gotourl" onclick="return gotoSite('https://www.ppomppu.co.kr/')">사이트 ↗</span></td></tr>
-<tr><td class="rank">4</td><td><a class="ext" href="profile.html"><b>에이시 (sir)</b></a><div class="meta">99.8% · 커뮤니티</div></td><td><span class="gotourl" onclick="return gotoSite('https://sir.kr')">사이트 ↗</span></td></tr>
-<tr><td class="rank">5</td><td><b>빠른링크</b> <span class="badge" style="border-color:var(--alert);color:var(--alert)">장애 중</span><div class="meta">71.3% · 17:58 사멸</div></td><td><span class="gotourl" style="opacity:.4" onclick="return gotoSite('#')">사이트 ↗</span></td></tr>
-</table>
+<div id="feed">
+<div class="fi"><b>김**</b> 여깄는데 잘 터지네요 3곳 다 되네요 <span style="float:right;color:#bbb;font-size:9.5px">3분 전</span></div>
+<div class="fi"><b>박**</b> 뽐뿌 원조 확정 배지 보고 가입했어요 <span style="float:right;color:#bbb;font-size:9.5px">8분 전</span></div>
+<div class="fi"><b>최**</b> 사칭 주의 제보 감사합니다 잘 봤어요 <span style="float:right;color:#bbb;font-size:9.5px">12분 전</span></div>
+</div>
+<div style="margin-top:8px"><a class="btn ghost" style="font-size:11px" href="qna.html">게시판 전체 (질문·제보) →</a></div>
 </div>
 
-<div class="adtile" onclick="return gotoSite('https://www.ppomppu.co.kr/')"><span class="badge ad">자리 광고</span><br><b style="color:var(--navy)">월 15만 원짜리 한 자리 — 목록 사이에 끼는 배너</b><br><span class="meta">업계가 73매씩 파는 그 배너를 우리는 장르·지표로 나눠 판다</span></div>
-
-<h2>장르별 판 <span class="en">들어감 = 장르 순위 페이지</span></h2>
-<div class="grid2">
-<a class="gcard ext" href="rank.html"><div class="n">주소모음 31곳</div><div class="q">검색 55만/월 · <b style="color:var(--alert)">이번 주 3곳 죽음</b></div></a>
-<a class="gcard ext" href="rank.html"><div class="n">스포츠중계 24곳</div><div class="q">검색 55만/월 · 경기 시간대 지표</div></a>
-<a class="gcard ext" href="rank.html"><div class="n">커뮤니티 12곳</div><div class="q">뽐뿌·DC·오유·sir · 글 증가 지수</div></a>
-<a class="gcard ext" href="rank.html"><div class="n">AI 도구 40곳</div><div class="q">급상승 · 이번 주 신규 6곳</div></a>
-<a class="gcard ext" href="rank.html"><div class="n">무료영상·웹툰 18곳</div><div class="q">사칭 다발 · 감점제 적용</div></a>
-<a class="gcard ext" href="rank.html"><div class="n">유흥·성인 22곳</div><div class="q">이 장르는 페이지 광고 비움</div></a>
+<footer>평가·분석 글은 랭킹 페이지 근거표와 프로필의 새주소 타임라인까지만. 본체는 <b>링크×광고 중계기</b>다. <span class="badge mock">MOCK v3</span></footer>
 </div>
-
-<div class="alert" style="margin-top:14px"><b>사칭 경보</b> — 여기여를 사칭하는 <b>yugi-y0.com</b> 관측 48시간째, 타이틀·로고 해시 불일치. <a href="profile.html" style="color:var(--alert)">판정 근거 →</a></div>
-
-<h2>금주의 판정</h2>
-<div class="card"><a class="ext" href="qna.html"><b>"원조 여기여" 논쟁, 로그로 끝내다</b></a><div class="meta" style="margin-top:4px">도메인 이력 90일 대조 · 6,200자 · <span class="badge mock">MOCK</span></div></div>
-
-<footer>모든 외부 링크는 업계 표준대로 새 창으로 뜬다 (실측: 여기여 본체 298개 전부 _blank). 진입 광고·플로팅 배너 포함 — <a href="rank.html">순위</a> · <a href="profile.html">프로필</a> · <a href="qna.html">질문판</a></footer>
-</div>
-<div class="fab" onclick="return gotoSite('https://yugiyu7.com')">🏪 <b>오늘의 자리 광고</b> — 우리 목록을 여기에 올리세요 (월정액) <small>AD</small></div>
-<div id="ovl"><div class="ovlc"><span class="tagx">×</span><span class="adlb">AD</span><div class="big">이동 전에 한 장 봐야지</div><div style="font-size:12px;color:#666"> 업계 표준 인스트리션 — 실측 여기여는 이 자리에 배너 73매를 심어놨음. 본가는 이동 전에 딱 1장, 카운트 공개</div><div class="cd" id="ovl-cd">3초 후 이동</div><div style="margin-top:8px;font-size:10px;color:#aaa" id="ovl-skip">배경 누르면 스킵</div></div></div>
-<div id="epop"><div class="ovlc"><span class="tagx" onclick="return closeEntry()">×</span><span class="adlb">AD</span><div class="big">🎰 진입 팝업 — 업계 필수품</div><div style="font-size:12px;color:#666">주소모음에 진입 팝업 없는 곳은 아직까지 없음. 하루 1회(세션)로 제한해도 클레임 반토막이라는 실측만 있음</div><div style="margin-top:10px"><a class="btn" style="font-size:12px" onclick="return closeEntry()">본가로 들어가기</a></div></div></div>
+<div class="fab" onclick="return gotoSite('#')">🏪 하단 고정 플로팅 — 업계 실측 고정배너 1개, 우리도 1개 <small>AD</small></div>
+<div id="epop"><div class="ovlc" style="background:#fff;border-radius:12px;max-width:330px;width:88%;padding:20px;text-align:center;position:relative"><span class="tagx" onclick="return closeEntry()" style="position:absolute;top:8px;right:12px;color:#999">×</span><span class="badge ad">AD</span><div style="font-size:19px;font-weight:800;margin:12px 0 4px;color:#24406e">🎰 진입 팝업</div><div style="font-size:12px;color:#666">세션당 1회. 업계 필수품 — 없는 곳이 없음</div><div style="margin-top:10px"><a class="btn" style="font-size:12px" onclick="return closeEntry()">본방 들어가</a></div></div></div>
 <script src="adstack.js"></script>
 </body></html>

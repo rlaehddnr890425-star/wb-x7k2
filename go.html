@@ -1,0 +1,17 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#17191e"><title>본가 경유 — 나가기 전에 한 장</title><link rel="stylesheet" href="style.css">
+<style>.gopage{max-width:430px;margin:0 auto;padding:34px 16px;text-align:center}.bigbtn{display:block;background:#1a7f4e;color:#fff;font-size:18px;font-weight:800;border-radius:12px;padding:18px;text-decoration:none;margin:20px 0 8px}.adbox{border:2px dashed #b98a2f;background:#fffaf0;border-radius:12px;padding:18px 12px;margin:14px 0;cursor:pointer}.adbox .t{font-weight:800;font-size:15px;color:#24406e}.adbox small{color:#888;font-size:10.5px}.skip{font-size:11px;color:#999;text-decoration:underline;cursor:pointer}</style></head>
+<body><div class="gopage">
+<div class="brand" style="font-size:18px">주소<b>본가</b> <span style="font-size:10px;color:#7a7568">경유지</span></div>
+<div style="font-size:12px;color:#7a7568;margin-top:4px">이동하려는 사이트: <span id="dest" style="color:#24406e;font-weight:700">…</span></div>
+
+<div class="adbox" onclick="return false"><span class="badge ad">AD · 1/2</span><div class="t">⚽ 스포츠 시즌권 — 오늘 첫 가입 40%</div><small>경유지 상단 자리 · 월정액 광고주</small></div>
+
+<a class="bigbtn" href="#" onclick="return goNow()">👉 본 사이트로 들어가기</a>
+<div class="skip">광고 스킵하고 바로 들어가기 (1.5초)</div>
+
+<div class="adbox" onclick="return false"><span class="badge ad">AD · 2/2</span><div class="t">🎰 출석만 해도 미지 머니</div><small>경유지 하단 자리 — 왕복할 때 또 노출됨</small></div>
+
+<div style="font-size:10.5px;color:#999;margin-top:18px">이 페이지 하나가 클릭당 페이지뷰 + 광고 2면을 벌립니다.<br>업계가 팝업 대신 이 방식을 씁니다 (실측: wdwd15 팝업 위젯 상시, 여기여 새창 113).</div>
+</div>
+<script>var u=new URLSearchParams(location.search).get('to')||'';document.getElementById('dest').textContent=u.replace(/^https?:\/\//,'').slice(0,42)||'(데모 목적지)';</script>
+</body></html>
